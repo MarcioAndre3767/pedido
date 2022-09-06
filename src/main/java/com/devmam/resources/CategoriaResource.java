@@ -25,6 +25,10 @@ public class CategoriaResource {
 		return ResponseEntity.ok().body(obj);
 	}
 	
+	
+//	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+	
+	
 //	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 //	public ResponseEntity<Categoria> buscar(@PathVariable Integer id) {
 //		Categoria obj = service.buscar(id);
