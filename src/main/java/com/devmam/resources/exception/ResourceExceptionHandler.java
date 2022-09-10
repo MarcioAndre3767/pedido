@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+import com.devmam.services.exceptions.DateIntegrityException;
 import com.devmam.services.exceptions.ObjectNotFoundException;
 
 @ControllerAdvice
@@ -21,6 +22,17 @@ public class ResourceExceptionHandler {
 			
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(err);
 	}
+	
+	@ExceptionHandler(DateIntegrityException.class)
+	public ResponseEntity<StandardError> dataIntegrity(DateIntegrityException e, 
+			HttpServletRequest request ) {
+		
+		StandardError err = new StandardError(HttpStatus.BAD_REQUEST.value(), e.getMessage(), 
+				System.currentTimeMillis());
+			
+		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(err);
+	}
+	
 
 }
 
