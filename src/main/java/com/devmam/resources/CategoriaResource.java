@@ -27,6 +27,7 @@ public class CategoriaResource {
 	
 	
 //	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+//	JsonFormat(pattern="dd/MM/yyyy HH:mm")
 	
 	
 //	@RequestMapping(value = "/{id}", method = RequestMethod.GET)

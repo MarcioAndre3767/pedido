@@ -117,7 +117,7 @@ public class ModelagemApplication implements CommandLineRunner {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 		
 		Pedido ped1 = new Pedido(null, sdf.parse("06/09/2022 20:05"), cli1, e1);
-		Pedido ped2 = new Pedido(null, sdf.parse("10/10/2017 20:10"), cli1, e2);
+		Pedido ped2 = new Pedido(null, sdf.parse("10/10/2022 20:10"), cli1, e2);
 		
 		Pagamento pagto1 = new PagamentoComCartao(null, EstadoPagamento.QUITADO, ped1, 6);
 		ped1.setPagamento(pagto1);
