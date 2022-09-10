@@ -48,9 +48,7 @@ public abstract class Pagamento implements Serializable {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-
 	
-	///???
 	public TipoCliente getEstado() {
 		return TipoCliente.toEnum(estado);
 	}
